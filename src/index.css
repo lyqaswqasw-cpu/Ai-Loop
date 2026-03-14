@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-zinc-100;
+  }
+}
+
+/* Markdown Styles */
+.prose pre {
+  @apply bg-[#111111] border border-white/5 rounded-xl p-4 my-4 overflow-x-auto;
+}
+
+.prose code {
+  @apply font-mono text-emerald-400 text-sm;
+}
+
+.prose p {
+  @apply mb-4 last:mb-0;
+}
+
+.prose ul, .prose ol {
+  @apply ml-6 mb-4 space-y-2;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-bold text-white mt-6 mb-3;
+}
+
+.prose h1 { @apply text-2xl; }
+.prose h2 { @apply text-xl; }
+.prose h3 { @apply text-lg; }
+
+.prose a {
+  @apply text-emerald-500 hover:underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-emerald-500/30 pl-4 italic text-zinc-400;
+}
+
